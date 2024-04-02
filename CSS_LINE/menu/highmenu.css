@@ -1,0 +1,92 @@
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+img {
+  display: block; /*블록 레벨 요소로 표시하도록 지정 */
+}
+a{
+  text-decoration: none;
+}
+
+
+header{
+  background-color: royalblue;
+}
+
+header .inner {
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: orange;
+  position: relative; /*해당 요소를 문서 흐름에 따라 정상적으로 배치하되, 위치를 상대적으로 이동시킬 때 사용됩니다.*/
+}
+
+header .logo{
+  height: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu {
+
+}
+
+header .sub-menu ul.menu{
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+header .sub-menu ul.menu li{
+  position: relative; /*해당 요소를 문서 흐름에 따라 정상적으로 배치하되, 위치를 상대적으로 이동시킬 때 사용됩니다.*/
+}
+
+header .sub-menu ul.menu li::before{ /* 선택한 요소의 내용의 앞에 새로운 요소를 생성 */
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child ::before{
+  display: none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+header .sub-menu ul.meun li a:hover{
+  color: #000;
+}
+
+header .sub-menu .search{
+
+}
+header .sub-menu .search input{
+
+}
+
+header .sub-menu{ /* 문서의 정상 흐름에서 벗어나 상대적으로 가장 가까운 조상 요소를 기준으로 위치 */
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+
+

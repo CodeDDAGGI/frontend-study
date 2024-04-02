@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  border: 1px solid black;
+  width: 500px;
+  height: 30px;
+  margin: 0 auto;
+}

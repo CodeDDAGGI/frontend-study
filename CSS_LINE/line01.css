@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#high-logo-back{
+  border-bottom: 1px solid black;
+  /*background-color: ;*/
+}
+
+#high-logo {
+  text-align: center;
+  border: 1px solid black;
+  width: 500px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+
+#high-menu-container {
+  border: 1px solid black;
+  float: right;
+  text-align: center;
+  margin: 0 auto;
+  width: 100% ;
+  height: 30px;
+  /* background-color: ; */
+}
+
+.high-menu-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu1, .menu2, .menu3 ,.menu4{
+  padding: 8px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: green;
+}
+
+.menu5 {
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 40px;
+  background-color: blue;
+}
+
+#middle-container{
+  border: 1px solid black;
+  text-align: center;
+}
+
+#middle-left {
+  border: 1px solid black;
+}
+
+#middle-right {
+  border: 1px solid black;
+}
