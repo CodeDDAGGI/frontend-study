@@ -1,0 +1,46 @@
+body {
+  background-color: #0a0a23;
+}
+
+#text {
+  background-color: #0a0a23;
+  color: #ffffff;
+  padding: 10px;
+}
+
+#game {
+  max-width: 500px;
+  max-height: 400px;
+  background-color: #ffffff;
+  color: #ffffff;
+  margin: 30px auto 0px;
+  padding: 10px;
+}
+
+#controls,
+#stats {
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: #0a0a23;
+}
+
+#monsterStats {
+  display: none;
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #c70d0d;
+}
+
+.stat {
+  padding-right: 10px;
+}
+
+button {
+  cursor:pointer;
+  color:#0a0a23;
+  background-color:#feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  /* background-image: 배경 이미지로 선형 그라데이션을 설정합니다. 이 그라데이션은 #fecc4c에서 시작하여 #ffac33로 끝납니다. */
+  border: 3px solid #feac32;
+}
