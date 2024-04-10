@@ -1,0 +1,33 @@
+용어 정리
+
+//! 프로미스(Promise)
+// 비동기 처리: 프로미스는 비동기 작업 처리 
+// 프로미스가 생성될 때 바로 실행되지 않고, 나중에 완료되거나 실패할 것임을 의미
+
+// 프로미스 상태 3가지
+// 대기(pending): 아직 결과가 알려지지 않은 초기 상태입니다.
+// 이행(fulfilled): 비동기 작업이 성공적으로 완료된 상태입니다.
+// 거부(rejected): 비동기 작업이 실패한 상태입니다.
+
+// 기본 구조
+//const myPromise = new Promise((resolve, reject) => {
+    // 비동기 작업 수행
+    // 성공적으로 작업을 완료할 경우 resolve 호출
+    // 작업이 실패할 경우 reject 호출
+});
+
+// 프로미스 소비
+// : 프로미스가 생성되면 콜백을 첨부하여 사용 가능
+// : then과 catch를 사용하여 이행과 거부 결과를 호출 가능
+fetchData()
+  .then(data => console.log('성공! 데이터: ', data))
+  .catch(error => console.error('실패! 에러: ', error));
+
+// fetch() 함수
+// - 네트워크 통신을 수행하고 웹 API로부터 데이터를 가져오거나 서버에 데이터를 전송
+/*
+  fetch(url-요청을 보낼 주소)
+    .then(response => response.json()) // JSON 형태로 응답을 처리
+    .then(data => console.log(data)) // 데이터 처리 및 사용
+    .catch(error => console.error(error)); // fetch에서 일어나는 오류 처리
+  */
