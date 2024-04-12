@@ -1,6 +1,6 @@
-import {User, Post} from './main';
+import {User, Post} from './model';
 
-// import {fetchData} from './apiUtils'
+import {fetchData} from './apiUtils'
 
 async function getUser(userId: number) {
   const user = await 
