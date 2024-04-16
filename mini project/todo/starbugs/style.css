@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.nanumgothic * {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum GOthic' , sans-serif;
+}
+img{
+  display: block; /* 해당 요소를 블록 레벨 요소로 지정 */
+  height: 85px ;
+  width: 85px ;
+}
+a{
+  text-decoration: none;
+}
+
+header {
+  background-color: royalblue;
+}
+
+header .inner {
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto; /* 외부여백 */
+  background-color: rgba(246,245,239);
+  position: relative; /* 다른 요소들과의 상대적인 위치를 변경 */
+}
+
+header .logo {
+  height: 75px; 
+   /* 요소를 절대적으로 배치 
+      왼쪽 상단에 배치
+   */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  /* 플렉스 박스(flexbox)로 지정하는 */
+  display: flex;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+  list-style-type: none;
+
+}
+
+/* before:새로운 가상컨텐츠 추가 앞면 */
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child::before {/* 요소를 화면에서 숨기는 것 */
+  display: none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display:  block;
+  color: #656565;
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+  position: relative;
+  height: 34px;
+}
+
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* 콘텐츠의 크기 뿐만 아니라 안쪽 여백(padding)과 테두리(border)도 포함하여 요소의 전체 크기를 계산 */
+  border-radius: 5px;
+  /* 외곽선(outline)을 제거 */
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  /* 요소의 상태 변화에 따른 부드러운 애니메이션을 추가 */
+  transition:  0.4s;
+}
+
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #690;
+}
+
+header .sub-menu .search .material-symbols-outlined {
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
+
+/* header .sub-menu .search.focused .material-symbols-outlined{
+   요소의 투명도를 조절 
+  opacity: 0;
+} */
