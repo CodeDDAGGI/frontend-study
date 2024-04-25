@@ -126,75 +126,51 @@ header .sub-menu .search .material-symbols-outlined {
   transition: .4s;
 }
 
-/* header .sub-menu .search.focused .material-symbols-outlined{
-   요소의 투명도를 조절 
-  opacity: 0;
-} */
-header .main_menu {
-  position: relative; /* 부모 요소의 상대적인 위치 설정 */
-}
-
-header .main-menu .item {
-  position: relative;
-  list-style-type: none;
-   /* 커피 레이블과 로고 사이의 간격 조절 */
-   position: relative;
-   top: 85px;
-}
-header .main-menu .item .item_name {
-  padding: 10px 20px 34px 20px;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  
-}
-
-header .main-menu .item:hover .item_name{
-  background-color: #2c2a29;
-  color: #669900;
-  border-radius: 6px 6px 0 0;
-  height:10px;
-}
-
-header .main-menu .item .item_contents{
-  width: 100%;
-  /* 부모 요소를 기준으로 상대적으로 배치 */
+header .main-menu{
   position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
+  top:60px;
+  width: 1100px;
+  height: 66px;
+  border:solid 0px black;
 }
 
-header .main-menu .item:hover .item_contents {
-  /* 화면에서 보이지 않도록 숨김 */
-  display: block;
+header .main-menu{
+  display: flex;
+  /* 선택된 요소의 자식 요소를 유연하게 배치를 위해 Flexbox 레이아웃을 사용 지정 */
+  justify-content: flex-end;
+  /* Flex 컨테이너 내의 자식 요소들을 컨테이너의 끝 쪽으로 정렬 */
+}
+
+header .main-menu ul{
+  list-style: none;
+  width: 737px;
+   display: flex;
+   justify-content:space-between;
+   /* 양 끝 정렬 */
+   border:solid 0px black;
+   /* 선택된 요소에 테두리를 적용하며, "--temp-border"라는 사용자 정의 변수 */
+}
+header .main-menu ul li{
+   text-align: center;
+   flex: auto;
+   
+}
+header .main-menu ul li a{
+   text-decoration: none;
+   display: block;
+   border:solid 0px black;
+   text-transform: uppercase;
+   font-size: 13px;
+   padding-top: 10px;
+   height: 66px;
+   color: #333;
 } 
 
-/* 커피 항목의 하위 항목들을 열로 정렬합니다 */
-header .main-menu .item_contents .contents_menu ul{
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 20px;
-  
-}
-header .main-menu .item_contents .contents_menu li{
-  text-align: left;
+header .main-menu ul li a:hover{
+   text-decoration: none;
+   background-color: #2c2a29;
+   color:#690;
 }
 
-header .main-menu .contents_menu .inner_container {
-  background-color: #2c2a29;
-  color : white;
-}
 
-/* header .main-menu .item_contents {
-  background-color: #2c2929;
-}
 
-header .main-menu .item .item_contents {
-  display: flex;
-  padding: 20px 0;
-}
-
-header .main-menu .item .item_contents  */
-
-/* header .main-menu .item .item */
