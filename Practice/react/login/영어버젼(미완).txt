@@ -1,0 +1,84 @@
+<section style={{
+          display:'flex',
+          flexDirection:'column',
+          alignItems:'center',
+          paddingTop:'40px'
+        }}>
+          <h2 style={{
+            fontSize:'20px'
+          }}>Easier sign in</h2>
+
+          <ul style={{
+            paddingTop:'25px',
+            listStyle:'none',
+            width:'465px',
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'center'
+          }}>
+            <li style={{
+              paddingBottom:'10px'
+            }}>
+              <button style={{
+                width:'465px',
+                height:'56px',
+                border:'solid 1px #dadada',
+                textAlign:'left',
+                background:'white'
+              }}>
+                <i style={{
+                  paddingLeft:'15px',
+                  fontSize:'20px',
+                  color:'#04c75a'
+                }}>
+
+                </i>
+              <span style={{
+                paddingLeft:'20px',
+                fontSize:'18px'
+              }}>
+                Sign in with QR code
+              </span>
+              </button>
+            </li>
+
+            <li>
+              <button>
+              <i style={{
+                  paddingLeft:'15px',
+                  fontSize:'20px',
+                  color:'#04c75a'
+                }}>
+                  
+                </i>
+              <span style={{
+                paddingLeft:'20px',
+                fontSize:'18px'
+              }}>
+              Facebook
+              </span>
+              </button>
+            </li>
+
+            <li>
+              <button>
+              <i style={{
+                  paddingLeft:'15px',
+                  fontSize:'20px',
+                  color:'#4064ac'
+                }}>
+                  
+                </i>
+              <span style={{
+                paddingLeft:'20px',
+                fontSize:'18px'
+              }}>
+                line
+              </span>
+              </button>
+            </li>
+          </ul>
+          <p>
+          Forgot your Username or Password? | Sign up
+          </p>
+        </section>
