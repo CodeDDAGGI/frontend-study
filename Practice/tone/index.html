@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
+</head>
+</head>
+<body>
+  <div class="main">
+    <div class="blocks">
+      <p>
+        drum
+      </p>
+      <br>
+      <p>
+        hat
+      </p>
+      <br>
+      <p>
+        bpm
+      </p>
+    </div>
+
+  <div class="btndiv">
+    <button class="c1">1</button>
+    <button class="c2">2</button>
+    <button class="c3">3</button>
+    <button class="c4">4</button>
+    <button class="c5">5</button>
+    <button class="">12</button>
+
+    <button class="">13</button>
+    <button class="">14</button>
+    <button class="">14</button>
+    <button class="">14</button>
+    <button class="bpm-120">120</button>
+    <button class="bpm-180">180</button>
+    <button class="bpm-240">240</button>
+    <button class="bpm-300">300</button>
+  </div>
+    <div class="">
+      <button class="stop">stop</button>
+    </div>
+  </div>
+  <script>
+      Tone.start();
+      
+      const drum = new Tone.MembraneSynth().toDestination();
+      const hat = new Tone.MetalSynth({
+        envelope: {
+        attack: 0.01,
+        decay: 0.1,
+        release:0.3
+      }}).toDestination()
+
+      let loop1, loop2 , loop3 , loop4 , loop5// c1 버튼에 대한 루프 변수
+      
+      document.querySelector('.c1').addEventListener('click', async () => {
+        await Tone.Transport.start(); 
+        if(!loop1){
+          
+          loop1 = new Tone.Loop(t => {
+            
+            drum.triggerAttackRelease("C1", "8n")
+          }, "4n").start(0);
+        }else{
+          loop1.start(0)
+        }
+      });
+      document.querySelector('.c2').addEventListener('click', async () => {
+        await Tone.Transport.start(); 
+        if(!loop2){
+          
+          loop2 = new Tone.Loop(t => {
+            
+            drum.triggerAttackRelease("C2", "8n")
+          }, "4n").start(0);
+        }else{
+          loop2.start(0)
+        }
+      });
+      document.querySelector('.c3').addEventListener('click', async () => {
+        await Tone.Transport.start(); 
+        if(!loop3){
+          
+          loop3 = new Tone.Loop(t => {
+            
+            drum.triggerAttackRelease("C3", "8n")
+          }, "4n").start(0);
+        }else{
+          loop3.start(0)
+        }
+      });
+      document.querySelector('.c4').addEventListener('click', async () => {
+        await Tone.Transport.start(); 
+        if(!loop4){
+          
+          loop4 = new Tone.Loop(t => {
+            
+            drum.triggerAttackRelease("C4", "8n")
+          }, "4n").start(0);
+        }else{
+          loop4.start(0)
+        }
+      });
+        
+      document.querySelector('.c5').addEventListener('click', async() => {
+          await Tone.Transport.start();
+          if(!loop5){
+          loop5 = new Tone.Loop(t => {
+            hat.triggerAttackRelease("C5", "8n")
+          }, "4n").start(0);
+        }else{
+          loop5.start(0)
+        }
+      });
+
+      document.querySelector('.bpm-120').addEventListener('click', async() => {
+        Tone.Transport.bpm.value = 120;
+      })
+      document.querySelector('.bpm-180').addEventListener('click', async() => {
+        Tone.Transport.bpm.value = 180;
+      })
+      document.querySelector('.bpm-240').addEventListener('click', async() => {
+        Tone.Transport.bpm.value = 240;
+      })
+      document.querySelector('.bpm-300').addEventListener('click', async() => {
+        Tone.Transport.bpm.value = 300;
+      })
+      document.querySelector('.stop').addEventListener('click',async () => {
+      Tone.Transport.stop();
+      
+      })
+
+  
+  </script>
+</body>
+</html>
