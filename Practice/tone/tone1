@@ -1,0 +1,56 @@
+import * as Tone from "tone";
+
+Tone.start(); // 사용자 동작에 대한 응답으로 Tone 시작
+Tone.Transport.start(); // Transport 시작
+
+const drum = new Tone.MembraneSynth().toDestination();
+const hat = new Tone.MetalSynth({
+  envelope: {
+    attack: 0.01,
+    decay: 0.1,
+    release: 0.3
+  }
+}).toDestination();
+
+const loops = {}; // 버튼에 대한 루프 객체를 저장할 객체
+
+// 버튼과 해당 음을 객체로 묶어 배열에 저장
+const buttons = [
+  { selector: '.c1', note: 'C1' },
+  { selector: '.c2', note: 'C2' },
+  { selector: '.c3', note: 'C3' },
+  { selector: '.c4', note: 'C4' },
+  { selector: '.c5', note: 'C5' }
+];
+
+// 버튼에 대한 루프 객체를 생성하고 저장하는 함수
+function createLoop(button) {
+  const loop = new Tone.Loop(t => {
+    drum.triggerAttackRelease(button.note, "8n");
+  }, "4n").start(0);
+  
+  loops[button.selector] = loop;
+}
+
+// 각 버튼에 대해 이벤트 핸들러를 등록하고 루프 객체를 생성함
+buttons.forEach(button => {
+  document.querySelector(button.selector).addEventListener('click', () => {
+    if (!loops[button.selector]) {
+      createLoop(button);
+    }
+    loops[button.selector].start(0);
+  });
+});
+
+// BPM 버튼에 대한 이벤트 핸들러 등록
+document.querySelectorAll('.bpm-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const bpmValue = button.dataset.bpm;
+    Tone.Transport.bpm.value = parseInt(bpmValue);
+  });
+});
+
+// 정지 버튼에 대한 이벤트 핸들러 등록
+document.querySelector('.stop').addEventListener('click', () => {
+  Tone.Transport.stop();
+});
