@@ -10,7 +10,19 @@
 .blocks {
   margin-top: 100px;
   margin-bottom: 100px ;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  flex-direction: column;
+  text-align: center;
 }
+
+.blocks p{
+  margin-bottom: 4px;
+  padding: 2px;
+  border: 1px solid black;
+}
+
 .btndiv {
   /* height: 400px;
   width: 60px; */
