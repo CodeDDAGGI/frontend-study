@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test01.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
 </head>
 </head>
 <body>
+    <div>
+        <h1></h1>
+    </div>
   <div class="main">
     <div class="blocks">
       <p>
@@ -20,6 +23,8 @@
       </p>
       <br>
       <p>
+        kick
+      <p>
         bpm
       </p>
     </div>
@@ -30,12 +35,18 @@
     <button class="c3">3</button>
     <button class="c4">4</button>
     <button class="c5">5</button>
-    <button class="">12</button>
 
-    <button class="">13</button>
-    <button class="">14</button>
-    <button class="">14</button>
-    <button class="">14</button>
+    <button class="hat1">11</button>
+    <button class="hat2">12</button>
+    <button class="hat3">13</button>
+    <button class="hat4">14</button>
+    <button class="hat5">15</button>
+
+    <button class="kick1">21</button>
+    <button class="kick2">22</button>
+    <button class="kick3">23</button>
+    <button class="kick4">24</button>
+    <button class="kick5">25</button>
     <button class="bpm-120">120</button>
     <button class="bpm-180">180</button>
     <button class="bpm-240">240</button>
@@ -55,6 +66,13 @@
         decay: 0.1,
         release:0.3
       }}).toDestination()
+      const kick = new Tone.Sampler({
+        urls: {
+        C1: "path/to/kick-sample.wav"
+        },
+        release: 1,
+        baseUrl: "path/to/samples/"
+        }).toDestination();
 
       let loop1, loop2 , loop3 , loop4 , loop5// c1 버튼에 대한 루프 변수
       
@@ -114,9 +132,119 @@
             hat.triggerAttackRelease("C5", "8n")
           }, "4n").start(0);
         }else{
-          loop5.start(0)
+          loop5.start(0);
         }
       });
+
+      document.querySelector('.hat1').addEventListener('click', async() => {
+        await Tone.Transport.start();
+        if(!loop6){
+            loop6 = new Tone.Loop(t=> {
+                hat.triggerAttackRelease("C1", "8n")
+            }, "4n").start(0);
+        }else{
+            loop6.start(0);
+        }
+      })
+
+      document.querySelector('.hat2').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop7){
+            loop7 = new Tone.Loop(t=> {
+                hat.triggerAttackRelease("C2", "8n")
+            }, "4n").start(0);
+        }else{
+            loop7.start(0);
+        }
+      })
+
+      document.querySelector('.hat3').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop8){
+            loop8 = new Tone.Loop(t=> {
+                hat.triggerAttackRelease("C3", "8n")
+            }, "4n").start(0);
+        }else{
+            loop8.start(0);
+        }
+      })
+
+      document.querySelector('.hat4').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop9){
+            loop9 = new Tone.Loop(t=> {
+                hat.triggerAttackRelease("C4", "8n")
+            }, "4n").start(0);
+        }else{
+            loop9.start(0);
+        }
+      })
+
+      document.querySelector('.hat5').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop10){
+            loop10 = new Tone.Loop(t=> {
+                hat.triggerAttackRelease("C5", "8n")
+            }, "4n").start(0);
+        }else{
+            loop10.start(0);
+        }
+      })
+
+      document.querySelector('.kick1').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop11){
+            loop11 = new Tone.Loop(t=> {
+                kick.triggerAttackRelease("C1", "8n")
+            }, "4n").start(0);
+        }else{
+            loop11.start(0);
+        }
+      })
+
+      document.querySelector('.kick2').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop12){
+            loop12 = new Tone.Loop(t=> {
+                kick.triggerAttackRelease("C2", "8n")
+            }, "4n").start(0);
+        }else{
+            loop12.start(0);
+        }
+      })
+
+      document.querySelector('.kick3').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop13){
+            loop13 = new Tone.Loop(t=> {
+                kick.triggerAttackRelease("C3", "8n")
+            }, "4n").start(0);
+        }else{
+            loop13.start(0);
+        }
+      })
+
+      document.querySelector('.kick4').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop14){
+            loop14 = new Tone.Loop(t=> {
+                kick.triggerAttackRelease("C4", "8n")
+            }, "4n").start(0);
+        }else{
+            loop14.start(0);
+        }
+      })
+
+      document.querySelector('.kick5').addEventListener('click', async()=> {
+        await Tone.Transport.start();
+        if(!loop15){
+            loop15 = new Tone.Loop(t=> {
+                kick.triggerAttackRelease("C5", "8n")
+            }, "4n").start(0);
+        }else{
+            loop15.start(0);
+        }
+      })
 
       document.querySelector('.bpm-120').addEventListener('click', async() => {
         Tone.Transport.bpm.value = 120;
