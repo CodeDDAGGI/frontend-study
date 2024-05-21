@@ -1,61 +1,62 @@
 .main{
-  margin: 0px;
-  padding: 0px;
-  width: 800px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.blocks {
-  margin-top: 100px;
-  margin-bottom: 100px ;
-  display: flex;
-  justify-content: center;
-  /* border: 1px solid black; */
-  flex-direction: column;
-  text-align: center;
-}
+    margin: 0px;
+    padding: 0px;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .blocks {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .blocks p{
+    margin-bottom: 4px;
+    padding: 2px;
+    border: 1px solid black;
+  }
+  
+  .btndiv {
+    /* height: 400px;
+    width: 60px; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5개의 열을 가진 그리드를 만듦 */
+    grid-gap: 5px; /* 아이템 사이의 간격 설정 */
+    /* justify-items: center; */
+  }
+  
+  .btndiv button {
+    border-radius: 40px;
+    border:1px solid white;
+    background-color: #ccc6c6;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+    color: #837d7d;
+  }
+  
+  .btndiv :hover {
+    background-color: rgb(65, 60, 60);
+  }
+  
+  .stop{
+    margin: 50px;
+    border: 1px solid white;
+    background-color: #ccc6c6;
+    color: #837d7d;
+    padding: 20px;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  .stop:hover {
+    background-color: rgb(65, 60, 60);
+  }
 
-.blocks p{
-  margin-bottom: 4px;
-  padding: 2px;
-  border: 1px solid black;
-}
 
-.btndiv {
-  /* height: 400px;
-  width: 60px; */
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5개의 열을 가진 그리드를 만듦 */
-  grid-gap: 5px; /* 아이템 사이의 간격 설정 */
-  /* justify-items: center; */
-}
-
-.btndiv button {
-  border-radius: 40px;
-  border:1px solid white;
-  background-color: #ccc6c6;
-  padding: 15px;
-  margin: 5px;
-  cursor: pointer;
-  color: #837d7d;
-}
-
-.btndiv :hover {
-  background-color: rgb(65, 60, 60);
-}
-
-.stop{
-  margin: 50px;
-  border: 1px solid white;
-  background-color: #ccc6c6;
-  color: #837d7d;
-  padding: 20px;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.stop:hover {
-  background-color: rgb(65, 60, 60);
-}
