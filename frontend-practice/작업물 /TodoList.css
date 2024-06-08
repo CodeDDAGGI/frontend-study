@@ -1,0 +1,148 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(204, 177, 141);
+  font-family: Arial, sans-serif;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 상단, 중단, 하단 배치 */
+}
+
+.TodoList {
+  display: flex;
+  color: #79a9e0;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 70px;
+  margin: 20px 0;
+}
+
+.dateMain, .clock, .menu-bar {
+  display: flex;
+  justify-content: center;
+  color: #264653;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.dateMain ul, .clock ul, .menu-bar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dateMain li, .clock li {
+  padding: 5px;
+  margin: 5px;
+}
+
+.menu-bar li {
+  font-size: 30px;
+  padding: 15px 40px;
+  margin: 15px;
+}
+
+.menu-bar ul li:hover {
+  background-color: rgb(243, 226, 226);
+  cursor: pointer;
+  border: 1px solid #264653;
+  border-radius: 20px;
+}
+
+.task-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.task-form input {
+  font-size: 16px;
+  padding: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.task-submit {
+  font-size: 16px;
+  height: 35px;
+  background-color: #f4a261;
+  width: 100px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.task-submit:focus {
+  background-color: #b6a89d;
+  outline: none;
+  border: 1px solid white;
+}
+
+.submit-icon {
+  font-size: 35px;
+  color: #2a9d8f;
+  cursor: pointer;
+}
+
+.task-form button {
+  background-color: rgb(204, 177, 141);
+  border: 1px solid rgb(204, 177, 141);
+}
+
+.task-form button :hover {
+  color: #425157;
+}
+
+.todo-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+}
+
+#todoList li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #f4f4f4;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#todoList li button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
