@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDO App</title>
+  <link rel="stylesheet" href="TodoTest.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+  <div id="main">
+    <div>
+      <section>
+        <div class="TodoList">TodoList</div>
+        <div class="dateMain">
+            <ul>
+              <li class="year"></li> 
+              <li>|</li>
+              <li class="month"></li> 
+              <li>|</li>
+              <li class="day"></li> 
+            </ul>
+        </div>
+    
+        <div class="clock">
+          <ul>
+            <li class="hr"></li>
+            <li>:</li>
+            <li class="mm"></li>
+            <li>:</li>
+            <li class="sec"></li>
+          </ul>
+        </div>
+    
+        <div class="menu-bar">
+            <ul>
+              <li>할 일</li>
+              <li>완 료</li>
+            </ul>
+        </div>
+        </section>
+  
+        <form class="task-form">
+          <input type="text" id="todoInput" value="" 
+          placeholder="할 일 입력"/>
+          <button onclick="AddTodo()">
+            <i class="bi bi-plus-square submit-icon"></i>
+            </button>
+        </form>
+        <div class="todo-div">
+          <ul id="todoList"></ul>
+        </div>
+    </div>
+  </div>
+  
+  <script src="TodoTest.js"></script>
+</body>
+</html>
