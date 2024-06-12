@@ -1,0 +1,10 @@
+.or::before,
+        .or::after {
+            display: inline-block;
+            content: "";
+            box-sizing: border-box;
+            margin: 0px 5px;
+            margin-bottom: 5px;
+            border-top: 1px solid #dbdbdb;
+            width: 100px;
+        }
