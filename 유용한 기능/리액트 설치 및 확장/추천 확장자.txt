@@ -20,6 +20,8 @@ ESLint
 
 4.Better Comments
   주석 활용
+  https://github.com/devgiants75/frontend-    
+  1223/blob/main/z_betterComments.txt
 5.Auto Rename Tag
   태그 자동 수정
 6.code Runner
