@@ -17,3 +17,31 @@ ESLint
 : 설치 후 정리할 코드에 ctrl + k + f 사용 시 자동 정렬
 기본 구성에 대한 기능 사용 질문
 구성 클릭 > Prettier 클릭
+
+4.Better Comments
+  주석 활용
+5.Auto Rename Tag
+  태그 자동 수정
+6.code Runner
+  코드 조각을 실행
+7.css Peek
+  html파일에서 클래스나 id를 클릭하면 연결된 css스타일을 미리볼수있음
+8.ESLint
+  javaScript 코드의 품질 검사하고 문제를 자동으로 수정할 수 있는 확장자
+  프로젝트 루트에 .eslintrc 파일을 추가하여 설정을 정의합니다.
+9.indent-rainbow
+  들여쓰기 수준에 따라 코드에 색상을 입혀주는 확장자
+10.JavaScript (ES6) code snippets
+  코드 단축
+11.JavaScript Snippet Pack
+  코드 단축
+12.Live Server
+  html,css,javaScript 실시간 반영
+13.one Dark Pro
+테마 : 다크
+
+14.polacode
+캡쳐 ctrl + shift + p polac
+
+15.prettier
+  코드 포맷터 언어의 코드를 일관된 스타일로 자동 정렬
