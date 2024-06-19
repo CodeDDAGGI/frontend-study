@@ -47,3 +47,13 @@ ESLint
 
 15.prettier
   코드 포맷터 언어의 코드를 일관된 스타일로 자동 정렬
+
+16. JSX 단축
+Ctrl + p 
+setting.json에 추가
+"emmet.syntaxProfiles": {
+     "javascript": "jsx" 
+ },
+ "emmet.includeLanguages": {
+    "javascript": "html"
+}
