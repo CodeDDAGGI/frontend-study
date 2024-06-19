@@ -1,0 +1,11 @@
+1. $ npx create-react-app 프로젝트 명
+>>error or install
+
+1-1. error >> $ npm remove npm
+
+npm 설치
+2. $ npm install npm
+
+2-1. error >> user > AppData > Roaming > npm파일없을시(생성)
+
+2-2. 재실행 npx create-react-app 프로젝트 명
