@@ -57,3 +57,12 @@ setting.json에 추가
  "emmet.includeLanguages": {
     "javascript": "html"
 }
+
+17. Reactjs code snippets
+Trigger	Content
+rcc	클래스 컴포넌트 생성
+rrc	클래스 컴포넌트와 react-redux 리덕스를 연결하여 생성
+rcjc	import와 export 없이 클래스 컴포넌트 생성
+rwwd	import 없이 클래스 컴포넌트 생성
+rsc	화살표 함수형 컴포넌트 생성
+rsf	함수형 컴포넌트 생성
