@@ -19,3 +19,7 @@
 //npm - 라이브러리 참조
 //https://www.npmjs.com/
 
+터미널 > git bash
+ctrl + shift + p
+>terminal select Default Profile
+에서 git bash
