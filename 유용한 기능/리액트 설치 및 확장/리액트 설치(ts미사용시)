@@ -9,3 +9,7 @@ npm 설치
 2-1. error >> user > AppData > Roaming > npm파일없을시(생성)
 
 2-2. 재실행 npx create-react-app 프로젝트 명
+
+3. node_modules가 없을 때
+git clone 할 경우
+npm start >> 오류 >> 터미널에 입력 npm install >> node_modules 다운
