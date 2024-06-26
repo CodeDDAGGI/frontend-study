@@ -72,3 +72,9 @@ rsf	함수형 컴포넌트 생성
 
 19.vscode-styled-components
 리액트 css 자동 단축
+
+// 라우터 설치
+npm i react-router-dom
+
+// 이모션 설치
+npm i @emotion/react
